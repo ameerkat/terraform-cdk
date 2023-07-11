@@ -527,7 +527,7 @@ export class ConstructsMaker {
     if (this.isJavaTarget) {
       opts.java = {
         outdir: ".", // generated java files aren't packaged, so just include directly in app
-        package: `imports.${target.srcMakName}`,
+        package: `${this.options.codeMakerOutput}.${target.srcMakName}`,
       };
     }
 
